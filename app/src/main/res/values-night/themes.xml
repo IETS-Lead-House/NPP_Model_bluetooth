@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NPP_Model_bluetooth" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. FF5A0B -->
+        <item name="colorPrimary">#FF5A0B</item>
+        <item name="colorPrimaryVariant">#EB6F06</item>
+        <item name="colorOnPrimary">#EC7D48</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#4AC537</item>
+        <item name="colorSecondaryVariant">#5AB445</item>
+        <item name="colorOnSecondary">#3F6C58</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:colorBackground">#000000</item>
+        <item name="colorOnBackground">#101010</item>
+    </style>
+</resources>

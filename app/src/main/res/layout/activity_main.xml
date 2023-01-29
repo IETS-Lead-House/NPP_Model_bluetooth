@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="?android:colorBackground"
+        android:id="@+id/rootLayout">
+    <ScrollView
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/infoLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="visible"
+            android:backgroundTintMode="multiply"
+            app:layout_constraintStart_toEndOf="@+id/left_stick"
+            app:layout_constraintEnd_toStartOf="@+id/right_stick"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="56sp"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
+            android:padding="8dp">
+        <TextView
+                android:text="@string/log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/log" android:textSize="16sp"/>
+    </ScrollView>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            app:layout_constraintEnd_toStartOf="@+id/right_stick"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:background="?colorOnBackground"
+            android:paddingLeft="16dp" android:paddingRight="16dp" android:gravity="fill"
+            android:id="@+id/connectionLayout">
+        <ImageView
+                android:layout_width="48sp"
+                android:layout_height="48sp" app:srcCompat="@drawable/ic_bluetooth"
+                android:id="@+id/bluetooth_icon" android:layout_weight="0"
+                android:layout_marginRight="16dp" android:padding="4dp" app:tint="@color/colorDisabled"
+                android:contentDescription="@string/bluetooth_icon"/>
+        <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/devicesList"
+                tools:ignore="SpeakableTextPresentCheck" android:layout_weight="3"/>
+        <androidx.appcompat.widget.AppCompatButton
+                android:text="@string/connect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:id="@+id/connect_button"
+                android:visibility="visible"
+                android:textSize="12sp"
+                android:layout_weight="7" android:textColor="?colorOnBackground"
+                android:backgroundTint="?colorOnPrimary"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="160dp"
+            android:layout_height="60dp" android:id="@+id/left_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintVertical_bias="0.2"
+            android:backgroundTint="?colorOnPrimary"/>
+    <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="160dp"
+            android:layout_height="60dp" android:id="@+id/right_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintVertical_bias="0.2"
+            android:backgroundTint="?colorOnPrimary"/>
+    <ru.iets.npp_model_bluetooth.JoystickView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" android:id="@+id/left_stick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintVertical_bias="0.9"
+            app:JV_backgroundColor="?colorOnBackground" app:JV_borderColor="?colorPrimary"
+            tools:JV_buttonColor="?colorOnPrimary" app:JV_buttonColor="?colorOnPrimary"/>
+    <ru.iets.npp_model_bluetooth.JoystickView
+            android:layout_width="160dp"
+            android:layout_height="wrap_content" android:id="@+id/right_stick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintVertical_bias="0.9"
+            app:JV_backgroundColor="?colorOnBackground" app:JV_borderColor="?colorPrimary"
+            tools:JV_buttonColor="?colorOnPrimary" app:JV_buttonColor="?colorOnPrimary"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

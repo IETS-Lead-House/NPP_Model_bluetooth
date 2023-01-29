@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name" translatable="false">IETS Lead Hole NPP Model Controller</string>
+    <string name="no_bluetooth">Please enable Bluetooth feature</string>
+    <string name="no_device">No connection device is selected</string>
+    <string name="disable_established">Bluetooth disabled</string>
+    <string name="enabled">Bluetooth is already enabled</string>
+    <string name="enable_established">Bluetooth is activated</string>
+    <string name="connected">Bluetooth device is already connected</string>
+    <string name="connect_established">Bluetooth device is successfully connected</string>
+    <string name="connect">Connect</string>
+    <string name="device_connected">Device is connected</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="disconnect_established">Oops, connect loose</string>
+    <string name="error_name">Error_name</string>
+    <string name="error_address">Error_address</string>
+    <string name="bluetooth_icon" translatable="false">bluetooth icon</string>
+    <string name="log" translatable="false">log</string>
+</resources>
